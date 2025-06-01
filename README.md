@@ -1,24 +1,27 @@
 # Raspberry Pi Image Classifier
 
-This project runs a lightweight AI image classifier on a Raspberry Pi 4 using PyTorch and a pre-trained ResNet-18 model. It classifies an input image (e.g., a dog photo) using CPU-only inference.
+A simple image classification web app built with **PyTorch**, **Flask**, and a **pretrained ResNet-18 model**, running on a **Raspberry Pi 4**.
 
-## Features
+### 🔍 Features
+- Classifies images using a pretrained ResNet model from `torchvision.models`
+- Uses `Pillow` to handle JPEG/PNG input
+- Displays prediction results through a Flask web interface
+- Optional tunneling with `ngrok` for public access
 
-- Loads and processes images using torchvision and Pillow
-- Performs inference with ResNet-18
-- Runs fully on Raspberry Pi without GPU (CUDA not required)
-- Easy to modify or adapt for Raspberry Pi camera input
+### 🖥️ Tech Stack
+- **Raspberry Pi 4 (64-bit OS)**
+- **Python 3.11**
+- **PyTorch + torchvision**
+- **Flask**
+- **ngrok** (for external tunneling)
+- **HTML (Jinja2 templates)**
 
-## Requirements
+### 📸 Sample Image
+Included: `1024px-Cute_dog.jpg` — used to test the classifier
 
-- Raspberry Pi 4 with Raspberry Pi OS 64-bit
-- Python 3.9+
-- pip install: `torch`, `torchvision`, `Pillow`
+### 🚀 How to Run
 
-## Usage
-
-From the project directory, run:
-
+#### 1. Clone the repo
 ```bash
-python3 classify.py
-
+git clone https://github.com/CyrusHurley/rpi-image-classifier.git
+cd rpi-image-classifier
